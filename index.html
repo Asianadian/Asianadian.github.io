@@ -7,22 +7,24 @@
     <title>My Website</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="primary-header flex">
-      <img src='' alt="Logo" class="logo"/>
-        
-      <button class="mobile-nav-toggle" aria-controls="primary-nav" aria-expanded="false">
-        <span class="sr-only">Menu</span>
-      </button>
+      <span class="logo">daniel.</span>
 
-      <nav>
-        <ul id="primary-nav" data-visible="false" class="primary-nav flex">
+      <nav class="primary-nav-container">
+        <ul id="primary-nav" data-visible="false" class="primary-nav navbar flex">
           <li class="active">
-            <a class="nav-option" href="/#end">contact</a>
+            <a class="nav-option" href="DANIELCHEN_RESUME_WF.pdf" target="_blank">resume</a>
           </li>
           <li class="active">
-            <a class="nav-option" href="/#end">resume</a>
+            <a class="nav-option" href="mailto:danielchen.mc@gmail.com" target="_blank">email</a>
+          </li>
+          <li class="active">
+            <a class="nav-option" href="https://www.linkedin.com/in/daniel-chen-8ab496211/" target="_blank">connect</a>
           </li>
         </ul>
       </nav>
@@ -30,6 +32,19 @@
     <main>
       
     </main>
+    <nav class="secondary-nav-container">
+      <ul id="secondary-nav" class="secondary-nav navbar flex">
+        <li class="active">
+          <a class="nav-option" href="DANIELCHEN_RESUME_WF.pdf" target="_blank">resume</a>
+        </li>
+        <li class="active">
+          <a class="nav-option" href="mailto:danielchen.mc@gmail.com" target="_blank">email</a>
+        </li>
+        <li class="active">
+          <a class="nav-option" href="https://www.linkedin.com/in/daniel-chen-8ab496211/" target="_blank">connect</a>
+        </li>
+      </ul>
+    </nav>
 	<script src="index.js"></script>
   </body>
 </html>

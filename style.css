@@ -1,5 +1,8 @@
+/* default */
+
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .flex {
@@ -10,16 +13,15 @@ a {
 body {
   background-color: black;
   overflow-x: hidden;
-}
-
-.sr-only {
-  visibility: collapse;
+  font-family: 'Inconsolata', monospace;
+  color: white;
 }
 
 /* navbar */
 
 .logo {
   margin: 1rem;
+  font-size: large;
 }
 
 .primary-header {
@@ -31,60 +33,67 @@ body {
   display: none;
 }
 
-.primary-nav {
+.navbar {
   list-style-type: none;
+  transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+.primary-nav {
   padding: 0;
   margin: 0;
   background: hsl(0 0% 0% / 0.75);
+  font-size: medium;
+
+  opacity: 100%;
+  transform: translateY(0);
+  padding-inline: clamp(3rem, 10vw, 6rem);
+  padding-block: 1.5rem;
 }
 
+.secondary-nav {
+  padding: 0;
+  margin: 0;
+  background: hsl(0 0% 0% / 0.75);
+  font-size: small;
+  position: fixed;
+  gap: 0.5rem;
+  bottom: 0;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(100%);
+  padding-inline: clamp(0.5rem, 10vw, 2rem);
+  padding-block: 0.5rem;
+}
+
+.secondary-nav-container {
+  display: flex;
+  justify-content: center;
+}
+
+
 @supports (backdrop-filter: blur(1rem)) {
-  .primary-nav {
-    background: hsl(0 0% 100% / 0.1);
-    backdrop-filter: blur(1rem);
+  .navbar {
+    background: hsl(0 0% 100% / 0.05);
   }
 }
 
 @media (min-width: 35em) {
   .primary-nav {
-    padding-block: 2rem;
-    padding-inline: clamp(3rem, 10vw,10rem);
+    transition-delay: 0.15s;
   }
 }
 
 @media (max-width: 35em) {
   .primary-nav {
-    --gap: 2em;
-
-    position: fixed;
-    z-index: 1000;
-    inset: 0 0 0 30%;
-
-    flex-direction: column;
-    padding: min(30vh, 10rem) 2rem;
-
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-100%);
+    padding-block: 1.5rem;
   }
-
-  .primary-nav[data-visible="true"] {
-    transform: translateX(0%);
-  }
-  
-  .mobile-nav-toggle {
-    display: block;
-    position: absolute;
-    z-index: 9999;
-    background: url('assets/icon-hamburger.svg');
-    background-repeat: no-repeat;
-    border: 0;
-    width: 2rem;
-    height: 2rem;
-    top: 2rem;
-    right: 2rem;
-  }
-
-  .mobile-nav-toggle[aria-expanded="true"] {
-    background-image: url("assets/icon-close.svg");
+  .secondary-nav {
+    opacity: 100%;
+    transform: translateY(-75%);
+    padding-inline: clamp(0.5rem, 10vw, 2rem);
+    padding-block: 0.5rem;
+    transition-delay: 0.15s;
   }
 }

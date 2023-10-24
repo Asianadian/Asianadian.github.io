@@ -10,10 +10,14 @@ a {
   gap: var(--gap, 1rem)
 }
 
+p {
+  z-index: 0;
+}
+
 body {
   background-color: black;
   overflow-x: hidden;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Sometype Mono', monospace;
   color: white;
 }
 
@@ -22,6 +26,7 @@ body {
 .logo {
   margin: 1rem;
   font-size: large;
+  font-weight: 700;
 }
 
 .primary-header {
@@ -42,7 +47,8 @@ body {
   padding: 0;
   margin: 0;
   background: hsl(0 0% 0% / 0.75);
-  font-size: medium;
+  font-size: large;
+  font-weight: 400;
 
   opacity: 100%;
   transform: translateY(0);
@@ -54,10 +60,11 @@ body {
   padding: 0;
   margin: 0;
   background: hsl(0 0% 0% / 0.75);
-  font-size: small;
+  font-size: medium;
+  font-weight: 400p;
   position: fixed;
   gap: 0.5rem;
-  bottom: 0;
+  bottom: 2rem;
   z-index: 1000;
   opacity: 0;
   transform: translateY(100%);
@@ -73,12 +80,19 @@ body {
 
 @supports (backdrop-filter: blur(1rem)) {
   .navbar {
-    background: hsl(0 0% 100% / 0.05);
+    background: hsl(0, 0%, 10%);
   }
 }
 
 @media (min-width: 35em) {
   .primary-nav {
+    transition-delay: 0.15s;
+  }
+  .secondary-nav[data-visible='true'] {
+    opacity: 100%;
+    transform: translateY(0%);
+    padding-inline: clamp(0.5rem, 10vw, 2rem);
+    padding-block: 0.5rem;
     transition-delay: 0.15s;
   }
 }
@@ -91,7 +105,7 @@ body {
   }
   .secondary-nav {
     opacity: 100%;
-    transform: translateY(-75%);
+    transform: translateY(0%);
     padding-inline: clamp(0.5rem, 10vw, 2rem);
     padding-block: 0.5rem;
     transition-delay: 0.15s;

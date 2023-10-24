@@ -1,17 +1,14 @@
 const primaryNav = document.querySelector('.primary-nav');
-const navToggle = document.querySelector('.mobile-nav-toggle');
+const secondaryNav = document.querySelector('.secondary-nav');
 
-navToggle.addEventListener('click', () => {
-  const visibility = primaryNav.getAttribute('data-visible');
-
-  if (visibility === "false") {
-    primaryNav.setAttribute("data-visible", true);
-    navToggle.setAttribute("aria-expanded", true);
+var showScroll = () => {   
+  if (document.documentElement.scrollTop >= 70) {
+    secondaryNav.setAttribute('data-visible', true);
   }
   else {
-    primaryNav.setAttribute("data-visible", false);
-    navToggle.setAttribute("aria-expanded", false);
+    secondaryNav.setAttribute('data-visible', false);
   }
-   
-  console.log(visibility)
-})
+  console.log(document.documentElement.scrollTop)
+}
+
+window.addEventListener('scroll', showScroll, false);

@@ -28,3 +28,19 @@ var scaleBanner = () => {
 }
 
 window.addEventListener('resize', scaleBanner, false)
+
+const separateLetters = id => {
+  const fancyWord = document.getElementById(id);
+  const text = fancyWord.innerText.split("");
+
+  fancyWord.innerText = "";
+  text.forEach(letter => {
+    const span = document.createElement("span");
+    span.className = "letter";
+    span.innerText = letter;
+    fancyWord.appendChild(span);
+  });
+}
+
+separateLetters("github-link");
+separateLetters("linkedin-link");

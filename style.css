@@ -119,6 +119,7 @@ hr {
 
 .word {
   margin: 0;
+  transition: opacity 0.2s ease-in-out
 }
 
 .banner-img {
@@ -130,6 +131,78 @@ hr {
   margin-top: 2rem;
 }
 
+.banner-text:has(.fancy:hover) .word:not(.fancy:hover) {
+  opacity: 0.2;
+}
+
+.fancy > .letter {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out
+}
+
+.fancy-1:hover > .letter:nth-child(1) {
+  transform: translate(-80%, 60%) rotate(8deg); 
+}
+
+.fancy-1:hover > .letter:nth-child(2) {
+  transform: translate(-40%, 40%) rotate(-8deg); 
+}
+
+.fancy-1:hover > .letter:nth-child(3) {
+  transform: translate(20%, -10%) rotate(17deg); 
+}
+
+.fancy-1:hover > .letter:nth-child(4) {
+  transform: translate(-10%, 50%) rotate(25deg); 
+}
+
+.fancy-1:hover > .letter:nth-child(5) {
+  transform: translate(30%, 10%) rotate(-11deg); 
+}
+
+.fancy-1:hover > .letter:nth-child(6) {
+  transform: translate(20%, -40%) rotate(3deg); 
+}
+
+.fancy-1:hover > .letter:nth-child(7) {
+  transform: translate(10%, 20%) rotate(-22deg); 
+}
+
+.fancy-2:hover > .letter:nth-child(1) {
+  transform: translate(-10%, -30%) rotate(-12deg); 
+}
+
+.fancy-2:hover > .letter:nth-child(2) {
+  transform: translate(-40%, 40%) rotate(-8deg); 
+}
+
+.fancy-2:hover > .letter:nth-child(3) {
+  transform: translate(-20%, 10%) rotate(17deg); 
+}
+
+.fancy-2:hover > .letter:nth-child(4) {
+  transform: translate(-30%, -40%) rotate(-25deg); 
+}
+
+.fancy-2:hover > .letter:nth-child(5) {
+  transform: translate(-30%, -10%) rotate(11deg); 
+}
+
+.fancy-2:hover > .letter:nth-child(6) {
+  transform: translate(-20%, 40%) rotate(-20deg); 
+}
+
+.fancy-2:hover > .letter:nth-child(7) {
+  transform: translate(10%, -30%) rotate(15deg); 
+}
+
+.fancy-2:hover > .letter:nth-child(8) {
+  transform: translate(10%, 20%) rotate(-22deg); 
+}
+
+.fancy-2:hover > .letter:nth-child(9) {
+  transform: translate(40%, 30%) rotate(-10deg); 
+}
 
 @media (min-width: 40em) {
   .secondary-nav[data-visible='true'] {

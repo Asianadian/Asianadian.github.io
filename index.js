@@ -5,6 +5,7 @@ const bannerCol = document.querySelector('.banner-col');
 const bannerText = document.querySelector('.banner-text');
 const bannerImg = document.querySelector('.banner-img');
 const screenWidth = window.screen.width;
+const windowWidth = window.innerWidth;
 
 var showScroll = () => {   
   if (document.documentElement.scrollTop >= 70) {
@@ -19,8 +20,11 @@ var showScroll = () => {
 window.addEventListener('scroll', showScroll, false);
 
 var scaleBanner = () => {
-  const newScale = Math.max(Math.min(window.innerWidth/screenWidth, 1) + 0.2, 0.55);
-  bannerText.style.scale = newScale
+  var currWidth = window.innerWidth;
+    if(currWidth !== windowWidth){
+      const newScale = Math.max(window.innerWidth/screenWidth + 0.2, 0.55);
+      bannerText.style.scale = newScale
+    }
 }
 
 window.addEventListener('resize', scaleBanner, false)

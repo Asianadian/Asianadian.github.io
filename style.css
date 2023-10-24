@@ -135,7 +135,6 @@ hr {
   .secondary-nav[data-visible='true'] {
     opacity: 100%;
     transform: translateY(0%);
-    padding-inline: clamp(0.5rem, 10vw, 2rem);
     padding-block: 0.5rem;
   }
 }
@@ -149,7 +148,6 @@ hr {
   .secondary-nav {
     opacity: 100%;
     transform: translateY(0%);
-    padding-inline: clamp(0.5rem, 10vw, 2rem);
     padding-block: 0.5rem;
   }
   .banner-main {

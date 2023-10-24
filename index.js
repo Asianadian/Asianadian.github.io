@@ -1,5 +1,10 @@
 const primaryNav = document.querySelector('.primary-nav');
 const secondaryNav = document.querySelector('.secondary-nav');
+const bannerMain = document.querySelector('.banner-main');
+const bannerCol = document.querySelector('.banner-col');
+const bannerText = document.querySelector('.banner-text');
+const bannerImg = document.querySelector('.banner-img');
+const screenWidth = window.screen.width;
 
 var showScroll = () => {   
   if (document.documentElement.scrollTop >= 70) {
@@ -12,3 +17,9 @@ var showScroll = () => {
 }
 
 window.addEventListener('scroll', showScroll, false);
+
+var scaleBanner = () => {
+  bannerCol.style.scale = Math.max(window.innerWidth / screenWidth + 0.2, 0.55);
+}
+
+window.addEventListener('resize', scaleBanner, false)

@@ -98,6 +98,7 @@ hr {
 }
 
 .banner-col {
+  padding-bottom: 2rem;
   flex: 50%;
   display: flex;
   justify-content: center;

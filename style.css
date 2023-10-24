@@ -86,11 +86,12 @@ hr {
 /* banner */
 
 .banner-container {
-  margin: 5rem 5rem;
+  margin: 2rem 5rem;
   transition: margin 0.15s ease-in-out;
 }
 
 .banner-main {
+  padding-bottom: 2rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -98,19 +99,16 @@ hr {
 }
 
 .banner-col {
-  padding-bottom: 2rem;
   flex: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  scale: 1;
 }
 
 .banner-text {
   width: 38em;
   scale: inherit;
   align-items: center;
-  scale: 1;
 }
 
 .line {
@@ -129,10 +127,11 @@ hr {
 
 .img-container {
   display: block;
+  margin-top: 2rem;
 }
 
 
-@media (min-width: 35em) {
+@media (min-width: 40em) {
   .secondary-nav[data-visible='true'] {
     opacity: 100%;
     transform: translateY(0%);
@@ -141,7 +140,7 @@ hr {
   }
 }
 
-@media (max-width: 35em) {
+@media (max-width: 40em) {
   .primary-nav {
     opacity: 0;
     transform: translateY(-100%);
@@ -157,6 +156,6 @@ hr {
     align-items: center;
   }
   .banner-container {
-    margin: 0 5rem;
+    margin-top: -2rem;
   }
 }

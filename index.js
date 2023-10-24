@@ -19,7 +19,8 @@ var showScroll = () => {
 window.addEventListener('scroll', showScroll, false);
 
 var scaleBanner = () => {
-  bannerCol.style.scale = Math.max(window.innerWidth / screenWidth + 0.2, 0.55);
+  const newScale = Math.max(window.innerWidth / screenWidth + 0.2, 0.55);
+  bannerText.style.scale = newScale
 }
 
 window.addEventListener('resize', scaleBanner, false)

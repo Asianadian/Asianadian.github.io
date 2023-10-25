@@ -45,10 +45,9 @@ hr {
 
 .navbar {
   list-style-type: none;
-  transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
   border: 1px;
-  border-style: solid;
-  border-color: white;
+  
   background-color: black;
 }
 
@@ -56,18 +55,18 @@ hr {
   padding: 0;
   margin: 0;
   font-size: large;
-  font-weight: 400;
+  font-weight: 700;
   opacity: 100%;
   transform: translateY(0);
-  padding-inline: clamp(3rem, 10vw, 8rem);
-  padding-block: 1.5rem;
+  margin: 1rem;
+  gap: 1.5rem
 }
 
 .secondary-nav {
   padding: 0;
   margin: 0;
   font-size: medium;
-  font-weight: 400p;
+  font-weight: 700;
   position: fixed;
   gap: 0.5rem;
   bottom: 2rem;
@@ -76,6 +75,8 @@ hr {
   transform: translateY(100%);
   padding-inline: clamp(0.5rem, 10vw, 2rem);
   padding-block: 0.5rem;
+  border-style: solid;
+  border-color: white;
 }
 
 .secondary-nav-container {
@@ -87,7 +88,7 @@ hr {
 
 .banner-container {
   margin: 2rem 5rem;
-  transition: margin 0.15s ease-in-out;
+  transition: margin 0.25s ease-in-out;
 }
 
 .banner-main {
@@ -95,11 +96,11 @@ hr {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .banner-col {
-  flex: 50%;
+  flex-basis: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,9 +123,6 @@ hr {
   transition: opacity 0.2s ease-in-out
 }
 
-.banner-img {
-  scale: 1;
-}
 
 .img-container {
   display: block;
@@ -208,7 +206,6 @@ hr {
   .secondary-nav[data-visible='true'] {
     opacity: 100%;
     transform: translateY(0%);
-    padding-block: 0.5rem;
   }
 }
 
@@ -216,12 +213,10 @@ hr {
   .primary-nav {
     opacity: 0;
     transform: translateY(-100%);
-    padding-block: 1.5rem;
   }
   .secondary-nav {
     opacity: 100%;
     transform: translateY(0%);
-    padding-block: 0.5rem;
   }
   .banner-main {
     align-items: center;

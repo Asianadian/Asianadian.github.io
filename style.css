@@ -145,11 +145,11 @@ hr {
 }
 
 .fancy-1:hover > .letter:nth-child(2) {
-  transform: translate(-40%, 40%) rotate(-8deg); 
+  transform: translate(-50%, -20%) rotate(-8deg); 
 }
 
 .fancy-1:hover > .letter:nth-child(3) {
-  transform: translate(20%, -10%) rotate(17deg); 
+  transform: translate(-10%, -10%) rotate(17deg); 
 }
 
 .fancy-1:hover > .letter:nth-child(4) {
@@ -189,7 +189,7 @@ hr {
 }
 
 .fancy-2:hover > .letter:nth-child(6) {
-  transform: translate(-20%, 40%) rotate(-20deg); 
+  transform: translate(10%, 40%) rotate(-20deg); 
 }
 
 .fancy-2:hover > .letter:nth-child(7) {

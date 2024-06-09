@@ -60,6 +60,12 @@ hr {
 
 .projects-card a {
   position: absolute;
+  width: inherit;
+  height: inherit;
+}
+
+.projects-card h2 {
+  position: absolute;
   background-color: black;
   padding: 5px;
   border-radius: 2px;
@@ -72,6 +78,7 @@ hr {
   transition: opacity 0.5s;
   background-color: black;
   opacity: 0;
+  cursor: pointer;
 }
 
 .projects-desc:hover {
@@ -79,7 +86,6 @@ hr {
 }
 
 .projects-desc p {
-  
   margin: 5px;
 }
 

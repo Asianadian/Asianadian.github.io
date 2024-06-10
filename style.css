@@ -89,6 +89,10 @@ hr {
   margin: 5px;
 }
 
+.projects-tech {
+  bottom: 0
+}
+
 .projects-card p {
   align-self: flex-start;
   justify-self: flex-start;

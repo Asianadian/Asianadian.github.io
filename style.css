@@ -51,11 +51,18 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('./assets/bot.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   overflow-x: hidden;
+}
+
+.fitnesstracker {
+  background-image: url('./assets/fitness-tracker.PNG');
+}
+
+.ppbot {
+  background-image: url('./assets/bot.PNG');
 }
 
 .projects-card a {
@@ -67,7 +74,8 @@ hr {
 .projects-card h2 {
   position: absolute;
   background-color: black;
-  padding: 5px;
+  border: 2px solid white;
+  padding: 5px 15px;
   border-radius: 2px;
 }
 

@@ -57,6 +57,10 @@ hr {
   overflow-x: hidden;
 }
 
+.geneticwheel {
+  background-image: url('./assets/genetic-wheel.png');
+}
+
 .fitnesstracker {
   background-image: url('./assets/fitness-tracker.png');
 }
